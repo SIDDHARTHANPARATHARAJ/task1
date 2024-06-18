@@ -1,0 +1,23 @@
+DAY 1 
+DIFFERENCE BETWEEN HTTP 1.1 and HTTP 2
+                    HTTP stands fo HYPER TEXT TRANSFER PROTOCOL and it is used in client-server
+communication.By using HTTP user sends the request to the server and server sends respond to the
+server.HTTP 1.1 was created in 1997 and HTTP 2 was created in 2015. 
+
+                    In HTTP 1.1 if we make a request to the sever for .html page and server 
+responds to you as a resource of asked .html page, before sending thr request and response there 
+is a TCP connection established between client and server.Again we can request to the server and 
+the server gives the response.The connection was not lost after the first request because we add a
+keep-alive header which is the part of the request so there is a open connection between the server
+and the client There is a persistent connection which means several requests and response are 
+merged in a single connection.There are some drawbacks that leads to the creation of HTTP 2.The 
+first problem is that HTTP 1.1 transfers all the request and response in a plain text messege form.
+The second one is head of line blocking in which TCP connection is blocked all other request 
+untill the response does not recieve all the information related to the header file is repeated in
+ every request.
+
+                    HTTP 2 was developed over the SPDY protocol.HTTP 2 works on the binary framing
+layer insted of textual that converts all the messeges in binary format.It works on fully 
+multiplexed that is one TCP connection is used for multiple request.HTTP 2 uses HPACK which is used
+to split data from header that compresses the header.The server sends all other files like CSS and 
+JS without the request of the client using the PUSH frame.                    
